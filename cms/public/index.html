@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio CMS</title>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <strong>Portfolio CMS</strong>
+            <small>Local admin</small>
+          </div>
+        </div>
+
+        <nav id="nav" class="nav"></nav>
+
+        <div class="sidebar-footer">
+          <div class="repo" id="repo-info">
+            <span class="dot"></span>
+            <span id="repo-branch">loading…</span>
+          </div>
+          <p class="hint">This panel runs locally only. Nothing is uploaded until you publish.</p>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <h1 id="section-title">Profile</h1>
+            <p id="section-subtitle" class="subtitle"></p>
+          </div>
+          <div class="topbar-actions">
+            <span id="dirty-flag" class="dirty-flag" hidden>Unsaved changes</span>
+            <button id="btn-save" class="btn btn-ghost" type="button">Save</button>
+            <button id="btn-build" class="btn btn-ghost" type="button">Build preview</button>
+            <button id="btn-publish" class="btn btn-primary" type="button">Publish</button>
+          </div>
+        </header>
+
+        <div class="workspace">
+          <section id="editor" class="editor"></section>
+
+          <aside class="preview-pane">
+            <div class="preview-head">
+              <span>Live preview</span>
+              <button id="btn-refresh-preview" class="icon-btn" type="button" title="Refresh">
+                ↻
+              </button>
+            </div>
+            <div class="preview-frame">
+              <iframe id="preview" title="Portfolio preview" src="/preview/"></iframe>
+            </div>
+            <div class="preview-foot">
+              <span id="build-status" class="status">idle</span>
+              <pre id="build-log" class="log"></pre>
+            </div>
+          </aside>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+
+    <dialog id="publish-dialog" class="dialog">
+      <form method="dialog">
+        <h2>Publish to GitHub</h2>
+        <p class="dialog-text">
+          The site is rebuilt, committed and pushed to
+          <strong id="publish-branch">main</strong>. The GitHub Actions workflow
+          deploys it to GitHub Pages.
+        </p>
+        <label class="field">
+          <span>Commit message</span>
+          <input id="publish-message" type="text" value="Update portfolio content" />
+        </label>
+        <div id="publish-files" class="publish-files"></div>
+        <menu class="dialog-actions">
+          <button value="cancel" class="btn btn-ghost" type="submit">Cancel</button>
+          <button id="publish-confirm" value="confirm" class="btn btn-primary" type="submit">
+            Build, commit &amp; push
+          </button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

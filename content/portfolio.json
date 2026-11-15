@@ -1,0 +1,261 @@
+{
+  "profile": {
+    "name": "Moedem Errachi",
+    "role": "Software Engineering Student",
+    "tagline": "DevOps · Web · AI",
+    "heroLabel": "FST TUNIS · FINAL SEASON — SEEKING A PFE SEAT",
+    "status": "ON TRACK — OPEN TO A PFE INTERNSHIP",
+    "summary": "Third-year Software Engineering student at FST, on the grid for a PFE seat in DevOps, web or AI. I race an application through its whole life — first interface to the pipeline that ships it. Two race seats already run: a contact platform in production with CI and Docker, a microservices stack with Jenkins and Terraform on AWS — and AI features built under hackathon clocks. AWS Cloud Practitioner licensed — ready for a team that keeps real systems running.",
+    "location": "El Manar 1, Tunis, Tunisia",
+    "email": "errachimoedem34@gmail.com",
+    "phone": "+216 56 617 680",
+    "photo": "/photo.jpg",
+    "resume": [
+      {
+        "label": "Download CV (EN)",
+        "href": "/cv/ERRACHI_Moedem_EN.pdf"
+      },
+      {
+        "label": "Télécharger CV (FR)",
+        "href": "/cv/ERRACHI_Moedem_FR.pdf"
+      }
+    ],
+    "links": [
+      {
+        "label": "GitHub",
+        "href": "https://github.com/MoedemErrachi",
+        "icon": "github"
+      },
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/moedem-errachi",
+        "icon": "linkedin"
+      },
+      {
+        "label": "Email",
+        "href": "mailto:errachimoedem34@gmail.com",
+        "icon": "mail"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Driver Briefing",
+    "title": "Engineer on the grid",
+    "description": "I care about the whole life of an application — clean backend logic, solid interfaces, and the pipelines that ship them and keep them running.",
+    "paragraphs": [
+      "Alongside my engineering degree at FST, I've completed two race seats: digitizing intern tracking at CPG with Spring Boot, then shipping the ARSII contact platform with Node.js, React and Docker — built in production, deployed, and online over 99% of the time.",
+      "Hackathons are my sprint rounds — a P2 podium at LunarHack with Campus Compass, then Menacraft (Top 5) and LunarHack 2.0 (Top 7) — where speed, teamwork and clear communication matter as much as the code. I hold the same standard in every project: if it isn't deployed and usable, it isn't finished."
+    ],
+    "highlights": [
+      {
+        "title": "Two race seats",
+        "text": "Fullstack & DevOps at ARSII, web development at CPG — real products, real users.",
+        "icon": "backend"
+      },
+      {
+        "title": "Sprint rounds",
+        "text": "Three rounds: a P2 podium, then Top 5 and Top 7 finishes — working software under the clock.",
+        "icon": "trophy"
+      },
+      {
+        "title": "Licensed",
+        "text": "AWS Cloud Practitioner and Microsoft Azure AI Fundamentals certified.",
+        "icon": "tools"
+      }
+    ]
+  },
+  "sections": {
+    "experience": {
+      "eyebrow": "Race Seats",
+      "title": "Professional experience",
+      "description": "Two internships where real products shipped — fullstack delivery, CI discipline and production uptime."
+    },
+    "skills": {
+      "eyebrow": "Setup Sheet",
+      "title": "Technical setup",
+      "description": "The assemblies I run — cloud & DevOps, backend, frontend, data and AI — tuned across internships, rounds and the garage."
+    },
+    "hackathons": {
+      "eyebrow": "Championship Rounds",
+      "title": "Sprint races, real results",
+      "description": "Competitive rounds with working software delivered under the clock."
+    },
+    "projects": {
+      "eyebrow": "The Garage",
+      "title": "Race entries",
+      "description": "Selected entries — a platform in production, a pipeline-first microservices stack and team builds. The rest of the garage lives on GitHub."
+    },
+    "education": {
+      "eyebrow": "Driver Academy",
+      "title": "Career ladder",
+      "description": "From a mathematics baccalaureate through the preparatory cycle to the engineering cycle at FST Tunis."
+    },
+    "contact": {
+      "eyebrow": "Pit Radio",
+      "title": "Open a channel",
+      "description": "I'm open to a PFE internship in DevOps, web or AI — wherever real systems get built and kept alive. The radio is open — pick your frequency."
+    }
+  },
+  "experience": [
+    {
+      "role": "Fullstack & DevOps Intern",
+      "company": "ARSII — Association for Scientific Research and Innovation in Computing",
+      "season": "SEASON 2026",
+      "period": "Jul – Aug 2026",
+      "stack": "Node.js · Express · TypeScript · React · Docker · GitHub Actions · Render",
+      "description": "Built and shipped the platform that centralizes the association's network contacts.",
+      "bullets": [
+        "Set up a GitHub Actions / SonarCloud CI checking tests, lint and quality on every commit, catching regressions before release and saving about 2 hours of manual checks per week.",
+        "Containerized the platform with Docker and deployed it on Render, Vercel and Supabase, behind a protected API, keeping it online over 99% of the time.",
+        "Developed the React / Node.js platform centralizing 1000+ network contacts, reachable in seconds with no emails or scattered files."
+      ],
+      "link": "https://github.com/MoedemErrachi/Plateforme-de-contact_ARSII",
+      "demo": "https://arsii-frontend.vercel.app"
+    },
+    {
+      "role": "Web Developer Intern",
+      "company": "CPG — Compagnie des Phosphates de Gafsa",
+      "season": "SEASON 2025",
+      "period": "July 2025",
+      "stack": "Spring Boot · React · MySQL",
+      "description": "Digitized intern tracking for one of Tunisia's largest industrial companies.",
+      "bullets": [
+        "Digitized intern tracking at CPG with Spring Boot and React, turning 40+ paper-based records into files retrieved in seconds.",
+        "Designed the REST API and the MySQL schema to give a real-time view of every intern's progress.",
+        "Shipped an administration dashboard that gathers all records and updates them in a few clicks."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Cloud & DevOps",
+      "icon": "tools",
+      "items": ["Docker", "AWS", "Terraform", "Helm"]
+    },
+    {
+      "category": "CI/CD & Quality",
+      "icon": "ci",
+      "items": ["Jenkins", "GitHub Actions", "SonarQube", "Git / GitHub", "Git Flow"]
+    },
+    {
+      "category": "Backend",
+      "icon": "backend",
+      "items": ["Node.js", "Express", "TypeScript", "Spring Boot", "FastAPI"]
+    },
+    {
+      "category": "Frontend",
+      "icon": "frontend",
+      "items": ["Angular", "React", "Tailwind CSS", "JavaScript", "HTML5 / CSS3"]
+    },
+    {
+      "category": "Databases",
+      "icon": "data",
+      "items": ["MySQL", "PostgreSQL", "MongoDB", "Supabase"]
+    },
+    {
+      "category": "AI & Data",
+      "icon": "ai",
+      "items": ["Python", "PyTorch", "Neural Networks (CNN)"]
+    }
+  ],
+  "hackathons": [
+    {
+      "title": "LunarHack",
+      "project": "Campus Compass",
+      "award": "P2",
+      "position": 2,
+      "date": "Apr 2025",
+      "description": "Co-developed Campus Compass, the smart campus assistant for FST (team THE LEGENDARY SANNIN) — implemented the chatbot logic: shortest-path routing between buildings with distance and step-by-step directions, FAQ answering, and multilingual understanding (FR / EN / Tunisian dialect) with auto-suggestions. Also delivered part of the Vite/JS frontend.",
+      "tags": ["Flask", "SQLAlchemy", "Vite / JS", "Chatbot"],
+      "link": "https://github.com/Chaabane2k03/ATIA_LunarHack"
+    },
+    {
+      "title": "Menacraft",
+      "project": "Ainek Mizenek",
+      "award": "TOP 5",
+      "date": "Apr 2026",
+      "description": "Co-developed a platform telling authentic content apart from AI-generated content in seconds — implemented the text/image consistency modules behind the confidence score and the React components that make it readable at a glance.",
+      "tags": ["AI content detection", "Text/image consistency", "React"],
+      "link": "https://github.com/MoedemErrachi/Menacraft"
+    },
+    {
+      "title": "LunarHack 2.0",
+      "project": "Sa3ed",
+      "award": "TOP 7",
+      "date": "Apr 2026",
+      "description": "Contributed to a Smart Business Suite automating routine business tasks — developed the AI Marketing Assistant and implemented the backend and automation workflows (FastAPI, n8n, Ollama) so the generation chain runs without manual intervention.",
+      "tags": ["FastAPI", "n8n", "Ollama"],
+      "link": "https://github.com/MoedemErrachi/LunarHack"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Microservices Platform",
+      "description": "Spring Boot microservices — config server, Eureka discovery, API gateway and Keycloak auth — with a full DevOps pipeline from Jenkins quality gates to Terraform + Helm on AWS.",
+      "highlights": [
+        "Jenkins + SonarQube quality gates: releases verified and reproducible in 20 minutes instead of half a day",
+        "Terraform + Helm bring a full AWS environment up in ~15 minutes",
+        "Observability built in: Prometheus, Grafana, Jaeger and Loki across every service"
+      ],
+      "tech": ["Spring Boot", "Angular", "Docker", "Jenkins", "SonarQube", "Terraform", "AWS"],
+      "repo": "https://github.com/Chaabane2k03/GL5-G4-student",
+      "featured": true
+    },
+    {
+      "title": "ARSII Contact Platform",
+      "description": "Fullstack contact platform centralizing 1000+ network contacts — deployed, demoable and online over 99% of the time.",
+      "highlights": [
+        "GitHub Actions / SonarCloud CI on every commit",
+        "Docker, deployed on Render, Vercel and Supabase"
+      ],
+      "tech": ["TypeScript", "React", "Node.js", "Docker", "GitHub Actions"],
+      "repo": "https://github.com/MoedemErrachi/Plateforme-de-contact_ARSII",
+      "demo": "https://arsii-frontend.vercel.app",
+      "featured": true
+    },
+    {
+      "title": "UniLink",
+      "description": "Team-built student–coordinator platform — I developed the core: a JWT-secured REST API with real-time WebSocket notifications.",
+      "highlights": [
+        "Dashboards summarize activity and requests at a glance, cutting manual tracking time by ~30%",
+        "Real-time WebSocket notifications so requests move without follow-ups"
+      ],
+      "tech": ["Node.js", "Express", "React", "WebSocket"],
+      "repo": "https://github.com/Louay012/UniLink-backend",
+      "featured": true
+    }
+  ],
+  "education": [
+    {
+      "degree": "Software Engineering — Génie Logiciel (5-year track)",
+      "school": "Faculty of Sciences of Tunis (FST)",
+      "period": "Final year — seeking PFE",
+      "description": "Engineering cycle focused on backend systems, databases and web application development."
+    },
+    {
+      "degree": "Preparatory Engineering Cycle",
+      "school": "Faculty of Sciences of Tunis (FST)",
+      "period": "Completed",
+      "description": "Two-year intensive preparation in mathematics and computer science before the engineering cycle."
+    },
+    {
+      "degree": "Baccalaureate in Mathematics",
+      "school": "Tunisia",
+      "period": "Completed",
+      "description": "Mathematics track, building the analytical foundation for engineering studies."
+    }
+  ],
+  "certifications": [
+    "AWS Cloud Practitioner",
+    "Microsoft Azure AI Fundamentals"
+  ],
+  "languages": [
+    { "name": "Arabic", "level": "Native" },
+    { "name": "French", "level": "Intermediate" },
+    { "name": "English", "level": "Intermediate" }
+  ],
+  "seo": {
+    "title": "Moedem Errachi — Software Engineering Student",
+    "description": "Portfolio of Moedem Errachi, software engineering student open to a PFE internship in DevOps, web or AI — a platform in production, CI/CD pipelines with Jenkins and GitHub Actions, and hackathon podium finishes."
+  }
+}

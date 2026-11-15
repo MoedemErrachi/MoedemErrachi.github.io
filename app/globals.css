@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Pit Wall palette ─────────────────────────────────────────── */
+  --color-carbon: #08090b;
+  --color-panel: #0f1013;
+  --color-elevated: #14151a;
+  --color-foreground: #f4f4f5;
+  --color-muted: #9b9ca3;
+  --color-line: rgba(255, 255, 255, 0.09);
+  --color-racing: #e10600;
+  --color-racing-soft: rgba(225, 6, 0, 0.14);
+  --color-gold: #ffd200;
+
+  --font-display: var(--font-barlow), "Arial Narrow", sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), Consolas, monospace;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-carbon);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(225, 6, 0, 0.55);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #08090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #23252c;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #e10600;
+}
+
+/* ── Broadcast texture layers ──────────────────────────────────── */
+
+/* Fine broadcast grid, strongest at the top of the viewport */
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    #000 55%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 90% 70% at 50% 0%,
+    #000 55%,
+    transparent 100%
+  );
+}
+
+/* Carbon weave: two crossed diagonal micro-stripes */
+.carbon {
+  background-image: repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.022) 0 2px,
+      transparent 2px 5px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.016) 0 2px,
+      transparent 2px 5px
+    );
+}
+
+/* Red light trail, like a long-exposure night shot */
+.streak {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(225, 6, 0, 0.55) 18%,
+    rgba(225, 6, 0, 0.08) 55%,
+    transparent
+  );
+  filter: blur(2px);
+}
+
+/* Chequered flag strip (pure CSS, black/white squares) */
+.chequered {
+  background-color: #08090b;
+  background-image: repeating-conic-gradient(
+    #f4f4f5 0% 25%,
+    #08090b 0% 50%
+  );
+  background-size: 14px 14px;
+}
+
+/* Corner brackets, four red ticks — broadcast graphic frame */
+.corners {
+  position: relative;
+}
+.corners::before,
+.corners::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+.corners::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--color-racing);
+  border-left: 2px solid var(--color-racing);
+}
+.corners::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--color-racing);
+  border-right: 2px solid var(--color-racing);
+}
+
+/* ── Surfaces ──────────────────────────────────────────────────── */
+
+.panel {
+  background: linear-gradient(180deg, #101114, #0c0d10);
+  border: 1px solid var(--color-line);
+}
+
+.panel-hover {
+  transition: border-color 0.15s ease, transform 0.15s ease,
+    background-color 0.15s ease;
+}
+.panel-hover:hover {
+  border-color: rgba(225, 6, 0, 0.55);
+  background-color: #121317;
+}
+
+/* Red left edge + 2px shift, timing-tower row behaviour */
+.row-shift {
+  transition: transform 0.12s ease, border-color 0.12s ease;
+  border-left: 2px solid transparent;
+}
+.row-shift:hover {
+  transform: translateX(2px);
+  border-left-color: var(--color-racing);
+}
+
+/* ── Type helpers ──────────────────────────────────────────────── */
+
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.telemetry {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.numeral {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Status dot ────────────────────────────────────────────────── */
+
+@keyframes live-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(225, 6, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(225, 6, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 6, 0, 0);
+  }
+}
+.live-dot {
+  animation: live-dot 2.4s ease-out infinite;
+}
+
+/* ── Layout helpers ────────────────────────────────────────────── */
+
+.section-anchor {
+  scroll-margin-top: 84px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .live-dot {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
